@@ -14,11 +14,12 @@
     <div id="app" class="container-fluid d-flex flex-column align-items-center ">
 
         <nav class="row justify-content-center">
-          <div class="box-logo p-1 d-flex justify-content-around align-items-center">
+          <div class="box-logo p-3 d-flex justify-content-around align-items-center">
             <img src="https://www.freepnglogos.com/uploads/spotify-logo-png/image-gallery-spotify-logo-21.png" alt="">
 
             <label for="genere">Scegli il genere:</label>
             <select v-model="selectedType" name="genere" >
+              <option value="">Tutti</option>
               <option value="Rock">Rock</option>
               <option value="Pop">Pop</option>
               <option value="Metal">Metal</option>
@@ -31,14 +32,13 @@
       <!-- sezioni canzoni -->
       <div class="container d-flex justify-content-center ">
         <div class="row d-flex justify-content-around ">
-          <div class="box-album  p-1 d-flex flex-column align-items-center justify-content-around" v-for="item in playList" v-if="item.genre.includes(selectedType)" >
+          <div class="box-album  p-1 d-flex flex-column align-items-center justify-content-around" v-for="item in playList" v-if="item.genre.includes(selectedType) " >
 
               <img :src="item.poster" alt="">
               <h4> {{item.title}} </h4>
               <h6> {{item.author}} </h6>
               <h6> {{item.year}} </h6>
               <h6> {{item.genre}} </h6>
-
 
           </div>
 

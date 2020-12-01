@@ -21,12 +21,12 @@ label{
   min-height: 500px);
 }
 nav{
-  /* background-color: rgb(0, 0, 0,0.2); */
+  background-color: rgb(0, 0, 0,0.2);
   border: 1px solid black;
   width: 80%;
 }
 .box-logo{
-  width: 35%;
+  width: 15%;
 }
 
 .box-logo > img{

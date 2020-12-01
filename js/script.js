@@ -23,6 +23,6 @@ var app = new Vue({
       console.log(this.playList);
     })
   },
-  
+
 
 });
