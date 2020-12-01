@@ -10,7 +10,8 @@
 var app = new Vue({
   el:"#app",
   data:{
-    playList:[]
+    playList:[],
+    selectedType:""
   },
 
   mounted:function () {
@@ -20,15 +21,8 @@ var app = new Vue({
       this.playList = risposta.data.response
       console.log(risposta.data.response);
       console.log(this.playList);
-
     })
-
   },
-
-
-
-
-
-
+  
 
 });
