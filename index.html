@@ -8,20 +8,36 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Dischi Musicali</title>
   </head>
-  <body>
-    <div class="container-fluid d-flex flex-column  ">
-      <nav >
+  <body >
 
-      </nav>
+    <!-- navbar -->
+    <div id="app" class="container-fluid d-flex flex-column align-items-center ">
+
+        <nav class="row justify-content-center">
+          <div class="box-logo p-1 d-flex justify-content-end">
+            <img src="https://www.freepnglogos.com/uploads/spotify-logo-png/image-gallery-spotify-logo-21.png" alt="">
+          </div>
+          <div class="box-select p-1 d-flex justify-content-start align-items-center">
+            <label for="genere">Scegli il genere:</label>
+            <select name="genere" id="cars">
+              <option value="Rock">Rock</option>
+              <option value="Pop">Pop</option>
+              <option value="Metal">Metal</option>
+              <option value="Jazz">Jazz</option>
+            </select>
+          </div>
+        </nav>
+
+      <!-- sezioni canzoni -->
       <div class="container d-flex justify-content-center ">
         <div class="row">
           <!-- <button type="button" name="button" @click="generaCd()" > Genera</button> -->
-          <div class="box-album d-flex flex-column align-items-center justify-content-around" v-for="(elem,i) in playList" >
+          <div class="box-album d-flex flex-column align-items-center justify-content-around" v-for="(canzone,i) in playList" >
 
-              <img :src="{{elem.poster}}" alt="">
-              <h4> {{elem.title}} </h4>
-              <h6> {{elem.author}} </h6>
-              <h6> {{elem.year}} </h6>
+              <img :src="{{canzone.poster}}" alt="">
+              <h4> {{canzone.title}} </h4>
+              <h6> {{canzone.author}} </h6>
+              <h6> {{canzone.year}} </h6>
 
           </div>
         </div>
