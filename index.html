@@ -18,8 +18,8 @@
             <img src="https://www.freepnglogos.com/uploads/spotify-logo-png/image-gallery-spotify-logo-21.png" alt="">
 
             <label for="genere">Scegli il genere:</label>
-            <select v-model="selectedType" name="genere" >
-              <option value="">Tutti</option>
+            <select v-model="selectedGenere" name="genere" >
+              <option value="Tutti">Tutti</option>
               <option value="Rock">Rock</option>
               <option value="Pop">Pop</option>
               <option value="Metal">Metal</option>
@@ -32,8 +32,9 @@
       <!-- sezioni canzoni -->
       <div class="container d-flex justify-content-center ">
         <div class="row d-flex justify-content-around ">
+
           <!-- inserimento canzoni tramite v-for e utilizzo select attraverso v-if al variare di value -->
-          <div class="box-album  p-1 d-flex flex-column align-items-center justify-content-around" v-for="item in playList" v-if="item.genre.includes(selectedType) " >
+          <div class="box-album  p-1 d-flex flex-column align-items-center justify-content-around" v-for="item in playList" v-if="selectedGenere === 'Tutti' || selectedGenere === item.genre " >
 
               <img :src="item.poster" alt="">
               <h4> {{item.title}} </h4>

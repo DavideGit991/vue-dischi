@@ -11,7 +11,7 @@ var app = new Vue({
   el:"#app",
   data:{
     playList:[],
-    selectedType:""
+    selectedGenere:"Tutti"
   },
 
   mounted:function () {
